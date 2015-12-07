@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+    version="2.0">
+
+    <portlet>
+        <portlet-name>account-item</portlet-name>
+        <display-name>Account Item</display-name>
+        <portlet-class>com.startarget.portlet.AccountItemPortlet</portlet-class>
+        <init-param>
+            <name>view-template</name>
+            <value>/html/accountitem/view.jsp</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Account Item</title>
+            <short-title>Account Item</short-title>
+            <keywords></keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+    <portlet>
+        <portlet-name>budget</portlet-name>
+        <display-name>Budget</display-name>
+        <portlet-class>com.startarget.portlet.BudgetPortlet</portlet-class>
+        <init-param>
+            <name>view-template</name>
+            <value>/html/budget/view.jsp</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Budget</title>
+            <short-title>Budget</short-title>
+            <keywords></keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+    <portlet>
+        <portlet-name>budget-application</portlet-name>
+        <display-name>Budget Application</display-name>
+        <portlet-class>com.startarget.portlet.BudgetApplicationPortlet</portlet-class>
+        <init-param>
+            <name>view-template</name>
+            <value>/html/budgetapplication/view.jsp</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Budget Application</title>
+            <short-title>Budget Application</short-title>
+            <keywords></keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+    <portlet>
+        <portlet-name>project</portlet-name>
+        <display-name>Project</display-name>
+        <portlet-class>com.startarget.portlet.ProjectPortlet</portlet-class>
+        <init-param>
+            <name>view-template</name>
+            <value>/html/project/view.jsp</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+
+        <supported-locale>en</supported-locale>
+        <supported-locale>zh_CN</supported-locale>
+        <resource-bundle>content.project.Language</resource-bundle>
+
+        <portlet-info>
+            <title>Project</title>
+            <short-title>Project</short-title>
+            <keywords></keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+    <portlet>
+        <portlet-name>budget-arrival</portlet-name>
+        <display-name>Budget Arrival</display-name>
+        <portlet-class>com.startarget.portlet.BudgetArrivalPortlet</portlet-class>
+        <init-param>
+            <name>view-template</name>
+            <value>/html/budgetarrival/view.jsp</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Budget Arrival</title>
+            <short-title>Budget Arrival</short-title>
+            <keywords></keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+    <portlet>
+        <portlet-name>query-budget</portlet-name>
+        <display-name>Query Budget</display-name>
+        <portlet-class>com.startarget.portlet.QueryBudgetPortlet</portlet-class>
+        <init-param>
+            <name>view-template</name>
+            <value>/html/querybudget/view.jsp</value>
+        </init-param>
+        <expiration-cache>0</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Query Budget</title>
+            <short-title>Query Budget</short-title>
+            <keywords></keywords>
+        </portlet-info>
+        <security-role-ref>
+            <role-name>administrator</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>guest</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>power-user</role-name>
+        </security-role-ref>
+        <security-role-ref>
+            <role-name>user</role-name>
+        </security-role-ref>
+    </portlet>
+</portlet-app>

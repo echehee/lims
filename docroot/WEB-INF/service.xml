@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.startarget.portlet">
+    <author>chaojie</author>
+    <namespace>lims</namespace>
+    <entity name="AccountItem" local-service="true">
+
+
+        <!-- PK fields -->
+
+        <column name="accountItemId" type="long" primary="true"></column>
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long"></column>
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+        <column name="name" type="String"></column>
+        <column name="parentName" type="String"></column>
+        <column name="itemCode" type="long"></column>
+    </entity>
+    <entity name="Project" local-service="true">
+
+
+        <!-- PK fields -->
+
+        <column name="projectId" type="long" primary="true"></column>
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long"></column>
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+        <column name="projectName" type="String" primary="false"></column>
+        <column name="projectLeader" type="String"></column>
+        <column name="projectStatus" type="String"></column>
+    </entity>
+    <entity name="Budget" local-service="true">
+
+        <!-- PK fields -->
+
+        <column name="budgetId" type="long" primary="true"></column>
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long"></column>
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+        <column name="projectName" type="String"></column>
+        <column name="budgetName" type="String"></column>
+        <column name="budgetStartYear" type="int"></column>
+        <column name="budgetEndYear" type="int"></column>
+        <column name="budgetTotal" type="double"></column>
+        <column name="budgetArrival" type="double"></column>
+    </entity>
+    <entity name="BudgetItem" local-service="true">
+
+        <!-- PK fields -->
+
+        <column name="budgetItemId" type="long" primary="true"></column>
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long"></column>
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+        <column name="budgetId" type="long"></column>
+        <column name="accountItemId" type="long"></column>
+        <column name="accountItemName" type="String"></column>
+        <column name="itemCode" type="long"></column>
+        <column name="budgetTotal" type="double"></column>
+        <column name="budgetUsed" type="double"></column>
+    </entity>
+    <entity name="BudgetApplication" local-service="true">
+
+
+        <!-- PK fields -->
+
+        <column name="budgetApplicationId" type="long" primary="true"></column>
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long"></column>
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+        <column name="applicantId" type="long"></column>
+        <column name="applicantName" type="String"></column>
+        <column name="auditorId" type="long"></column>
+        <column name="auditorName" type="String"></column>
+        <column name="auditDate" type="Date"></column>
+        <column name="approverId" type="long"></column>
+        <column name="approverName" type="String"></column>
+        <column name="approveDate" type="Date"></column>
+        <column name="finisherId" type="long"></column>
+        <column name="finisherName" type="String"></column>
+        <column name="finisherDate" type="Date"></column>
+        <column name="rejectReason" type="String"></column>
+        <column name="applicationStatus" type="String"></column>
+        <column name="applicationDescription" type="String"></column>
+        <column name="applicationTotal" type="double"></column>
+        <column name="projectName" type="String"></column>
+        <column name="budgetName" type="String"></column>
+        <column name="budgetItemId" type="long"></column>
+    </entity>
+    <entity name="BudgetArrival" local-service="true">
+
+        <!-- PK fields -->
+
+        <column name="budgetArrivalId" type="long" primary="true"></column>
+
+        <!-- Group instance -->
+
+        <column name="groupId" type="long"></column>
+
+        <!-- Audit fields -->
+
+        <column name="companyId" type="long"></column>
+        <column name="userId" type="long"></column>
+        <column name="userName" type="String"></column>
+        <column name="createDate" type="Date"></column>
+        <column name="modifiedDate" type="Date"></column>
+        <column name="operatorId" type="long"></column>
+        <column name="operatorName" type="String"></column>
+        <column name="arrivalTotal" type="double"></column>
+        <column name="projectName" type="String"></column>
+        <column name="budgetName" type="String"></column>
+    </entity>
+</service-builder>

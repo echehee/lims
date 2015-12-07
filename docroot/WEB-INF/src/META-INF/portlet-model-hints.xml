@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.startarget.portlet.model.AccountItem">
+		<field name="accountItemId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="parentName" type="String" />
+		<field name="itemCode" type="long" />
+	</model>
+	<model name="com.startarget.portlet.model.Budget">
+		<field name="budgetId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="projectName" type="String" />
+		<field name="budgetName" type="String" />
+		<field name="budgetStartYear" type="int" />
+		<field name="budgetEndYear" type="int" />
+		<field name="budgetTotal" type="double" />
+		<field name="budgetArrival" type="double" />
+	</model>
+	<model name="com.startarget.portlet.model.BudgetApplication">
+		<field name="budgetApplicationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="applicantId" type="long" />
+		<field name="applicantName" type="String" />
+		<field name="auditorId" type="long" />
+		<field name="auditorName" type="String" />
+		<field name="auditDate" type="Date" />
+		<field name="approverId" type="long" />
+		<field name="approverName" type="String" />
+		<field name="approveDate" type="Date" />
+		<field name="finisherId" type="long" />
+		<field name="finisherName" type="String" />
+		<field name="finisherDate" type="Date" />
+		<field name="rejectReason" type="String" />
+		<field name="applicationStatus" type="String" />
+		<field name="applicationDescription" type="String" />
+		<field name="applicationTotal" type="double" />
+		<field name="projectName" type="String" />
+		<field name="budgetName" type="String" />
+		<field name="budgetItemId" type="long" />
+	</model>
+	<model name="com.startarget.portlet.model.BudgetArrival">
+		<field name="budgetArrivalId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="operatorId" type="long" />
+		<field name="operatorName" type="String" />
+		<field name="arrivalTotal" type="double" />
+		<field name="projectName" type="String" />
+		<field name="budgetName" type="String" />
+	</model>
+	<model name="com.startarget.portlet.model.BudgetItem">
+		<field name="budgetItemId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="budgetId" type="long" />
+		<field name="accountItemId" type="long" />
+		<field name="accountItemName" type="String" />
+		<field name="itemCode" type="long" />
+		<field name="budgetTotal" type="double" />
+		<field name="budgetUsed" type="double" />
+	</model>
+	<model name="com.startarget.portlet.model.Project">
+		<field name="projectId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="projectName" type="String" />
+		<field name="projectLeader" type="String" />
+		<field name="projectStatus" type="String" />
+	</model>
+</model-hints>

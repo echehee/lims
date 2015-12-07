@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.startarget.portlet.model.impl.AccountItemModelImpl">
+		<attributes>
+			<id name="accountItemId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="name" />
+			<basic name="parentName" />
+			<basic name="itemCode" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.startarget.portlet.model.impl.BudgetModelImpl">
+		<attributes>
+			<id name="budgetId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="projectName" />
+			<basic name="budgetName" />
+			<basic name="budgetStartYear" />
+			<basic name="budgetEndYear" />
+			<basic name="budgetTotal" />
+			<basic name="budgetArrival" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.startarget.portlet.model.impl.BudgetApplicationModelImpl">
+		<attributes>
+			<id name="budgetApplicationId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="applicantId" />
+			<basic name="applicantName" />
+			<basic name="auditorId" />
+			<basic name="auditorName" />
+			<basic name="auditDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="approverId" />
+			<basic name="approverName" />
+			<basic name="approveDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="finisherId" />
+			<basic name="finisherName" />
+			<basic name="finisherDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="rejectReason" />
+			<basic name="applicationStatus" />
+			<basic name="applicationDescription" />
+			<basic name="applicationTotal" />
+			<basic name="projectName" />
+			<basic name="budgetName" />
+			<basic name="budgetItemId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.startarget.portlet.model.impl.BudgetArrivalModelImpl">
+		<attributes>
+			<id name="budgetArrivalId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="operatorId" />
+			<basic name="operatorName" />
+			<basic name="arrivalTotal" />
+			<basic name="projectName" />
+			<basic name="budgetName" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.startarget.portlet.model.impl.BudgetItemModelImpl">
+		<attributes>
+			<id name="budgetItemId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="budgetId" />
+			<basic name="accountItemId" />
+			<basic name="accountItemName" />
+			<basic name="itemCode" />
+			<basic name="budgetTotal" />
+			<basic name="budgetUsed" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.startarget.portlet.model.impl.ProjectModelImpl">
+		<attributes>
+			<id name="projectId" />
+			<basic name="groupId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="projectName" />
+			<basic name="projectLeader" />
+			<basic name="projectStatus" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.startarget.portlet.model.impl.AccountItemImpl" name="AccountItem">
+		<table name="lims_AccountItem" />
+		<attributes />
+	</entity>
+	<entity class="com.startarget.portlet.model.impl.BudgetImpl" name="Budget">
+		<table name="lims_Budget" />
+		<attributes />
+	</entity>
+	<entity class="com.startarget.portlet.model.impl.BudgetApplicationImpl" name="BudgetApplication">
+		<table name="lims_BudgetApplication" />
+		<attributes />
+	</entity>
+	<entity class="com.startarget.portlet.model.impl.BudgetArrivalImpl" name="BudgetArrival">
+		<table name="lims_BudgetArrival" />
+		<attributes />
+	</entity>
+	<entity class="com.startarget.portlet.model.impl.BudgetItemImpl" name="BudgetItem">
+		<table name="lims_BudgetItem" />
+		<attributes />
+	</entity>
+	<entity class="com.startarget.portlet.model.impl.ProjectImpl" name="Project">
+		<table name="lims_Project" />
+		<attributes />
+	</entity>
+</entity-mappings>

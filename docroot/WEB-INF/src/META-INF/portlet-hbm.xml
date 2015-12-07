@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.startarget.portlet.model.AccountItem" />
+	<import class="com.startarget.portlet.model.Budget" />
+	<import class="com.startarget.portlet.model.BudgetApplication" />
+	<import class="com.startarget.portlet.model.BudgetArrival" />
+	<import class="com.startarget.portlet.model.BudgetItem" />
+	<import class="com.startarget.portlet.model.Project" />
+	<class name="com.startarget.portlet.model.impl.AccountItemImpl" table="lims_AccountItem">
+		<cache usage="read-write" />
+		<id name="accountItemId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="parentName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="itemCode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.startarget.portlet.model.impl.BudgetImpl" table="lims_Budget">
+		<cache usage="read-write" />
+		<id name="budgetId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="projectName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="budgetName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="budgetStartYear" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="budgetEndYear" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="budgetTotal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="budgetArrival" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="com.startarget.portlet.model.impl.BudgetApplicationImpl" table="lims_BudgetApplication">
+		<cache usage="read-write" />
+		<id name="budgetApplicationId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="applicantId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="applicantName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="auditorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="auditorName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="auditDate" type="org.hibernate.type.TimestampType" />
+		<property name="approverId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="approverName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approveDate" type="org.hibernate.type.TimestampType" />
+		<property name="finisherId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="finisherName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="finisherDate" type="org.hibernate.type.TimestampType" />
+		<property name="rejectReason" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="applicationStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="applicationDescription" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="applicationTotal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="projectName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="budgetName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="budgetItemId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.startarget.portlet.model.impl.BudgetArrivalImpl" table="lims_BudgetArrival">
+		<cache usage="read-write" />
+		<id name="budgetArrivalId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="operatorId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="operatorName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="arrivalTotal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="projectName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="budgetName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.startarget.portlet.model.impl.BudgetItemImpl" table="lims_BudgetItem">
+		<cache usage="read-write" />
+		<id name="budgetItemId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="budgetId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="accountItemId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="accountItemName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="itemCode" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="budgetTotal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="budgetUsed" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+	</class>
+	<class name="com.startarget.portlet.model.impl.ProjectImpl" table="lims_Project">
+		<cache usage="read-write" />
+		<id name="projectId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="projectName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="projectLeader" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="projectStatus" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

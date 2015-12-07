@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.startarget.portlet.service.AccountItemLocalService" class="com.startarget.portlet.service.impl.AccountItemLocalServiceImpl" />
+	<bean id="com.startarget.portlet.service.AccountItemService" class="com.startarget.portlet.service.impl.AccountItemServiceImpl" />
+	<bean id="com.startarget.portlet.service.persistence.AccountItemPersistence" class="com.startarget.portlet.service.persistence.AccountItemPersistenceImpl" parent="basePersistence" />
+	<bean id="com.startarget.portlet.service.BudgetLocalService" class="com.startarget.portlet.service.impl.BudgetLocalServiceImpl" />
+	<bean id="com.startarget.portlet.service.BudgetService" class="com.startarget.portlet.service.impl.BudgetServiceImpl" />
+	<bean id="com.startarget.portlet.service.persistence.BudgetPersistence" class="com.startarget.portlet.service.persistence.BudgetPersistenceImpl" parent="basePersistence" />
+	<bean id="com.startarget.portlet.service.BudgetApplicationLocalService" class="com.startarget.portlet.service.impl.BudgetApplicationLocalServiceImpl" />
+	<bean id="com.startarget.portlet.service.BudgetApplicationService" class="com.startarget.portlet.service.impl.BudgetApplicationServiceImpl" />
+	<bean id="com.startarget.portlet.service.persistence.BudgetApplicationPersistence" class="com.startarget.portlet.service.persistence.BudgetApplicationPersistenceImpl" parent="basePersistence" />
+	<bean id="com.startarget.portlet.service.BudgetArrivalLocalService" class="com.startarget.portlet.service.impl.BudgetArrivalLocalServiceImpl" />
+	<bean id="com.startarget.portlet.service.BudgetArrivalService" class="com.startarget.portlet.service.impl.BudgetArrivalServiceImpl" />
+	<bean id="com.startarget.portlet.service.persistence.BudgetArrivalPersistence" class="com.startarget.portlet.service.persistence.BudgetArrivalPersistenceImpl" parent="basePersistence" />
+	<bean id="com.startarget.portlet.service.BudgetItemLocalService" class="com.startarget.portlet.service.impl.BudgetItemLocalServiceImpl" />
+	<bean id="com.startarget.portlet.service.BudgetItemService" class="com.startarget.portlet.service.impl.BudgetItemServiceImpl" />
+	<bean id="com.startarget.portlet.service.persistence.BudgetItemPersistence" class="com.startarget.portlet.service.persistence.BudgetItemPersistenceImpl" parent="basePersistence" />
+	<bean id="com.startarget.portlet.service.ProjectLocalService" class="com.startarget.portlet.service.impl.ProjectLocalServiceImpl" />
+	<bean id="com.startarget.portlet.service.ProjectService" class="com.startarget.portlet.service.impl.ProjectServiceImpl" />
+	<bean id="com.startarget.portlet.service.persistence.ProjectPersistence" class="com.startarget.portlet.service.persistence.ProjectPersistenceImpl" parent="basePersistence" />
+</beans>
